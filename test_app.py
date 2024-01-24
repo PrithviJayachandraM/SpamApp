@@ -17,5 +17,5 @@ class MyAppTestCase(unittest.TestCase):
         
         assert classify_text("Hello, how are you?", model) == "Not Spam"
 
-#test_classify_text()
+    test_classify_text()
 
