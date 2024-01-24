@@ -1,4 +1,4 @@
-# tests/test_app.py
+"""# tests/test_app.py
 import sys
 from joblib import load
 import unittest
@@ -19,3 +19,21 @@ class MyAppTestCase(unittest.TestCase):
 
     test_classify_text()
 
+"""
+
+import sys
+from joblib import load
+import unittest
+
+from main import classify_text #Importing classify Function from main.py file
+from dummy_model import DummyModel
+
+class MyAppTestCase(unittest.TestCase):
+    def test_classify_text(self):    # 'self' needs to be included here
+        model = load('spam_model.joblib')
+
+        self.assertEqual(classify_text("You've won a prize!", model), "Spam")
+        self.assertEqual(classify_text("Hello, how are you?", model), "Not Spam")
+
+#if __name__ == '__main__':
+ #   unittest.main()
