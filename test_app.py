@@ -15,7 +15,7 @@ class MyAppTestCase(unittest.TestCase):
         #Python's assert statement allows you to write sanity checks in your code. 
         #It will pass this statement if is it spam then it will pass otherwise throw error
         
-        assert classify_text("Hello, how are you won?", model) == "Not Spam"
+        assert classify_text("Hello, how are you?", model) == "Not Spam"
 
 #test_classify_text()
 
