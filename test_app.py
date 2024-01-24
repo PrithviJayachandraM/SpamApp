@@ -33,7 +33,7 @@ class MyAppTestCase(unittest.TestCase):
         model = load('spam_model.joblib')
 
         self.assertEqual(classify_text("You've won a prize!", model), "Spam")
-        self.assertEqual(classify_text("Hello, how are you?", model), "Not Spam")
+        self.assertEqual(classify_text("Hello, how are you Who?", model), "Not Spam")
 
 #if __name__ == '__main__':
  #   unittest.main()
